@@ -26,12 +26,15 @@ function Nav() {
         <Link className="navLink" to={loginLinkData.path}>
           {loginLinkData.text}
         </Link>
+        <Link className="navLink" to="/shelf">
+              The Shelf
+        </Link>
 
         {user.id && (
           <>
-            <Link className="navLink" to="/shelf">
+            {/* <Link className="navLink" to="/shelf">
               The Shelf
-            </Link>
+            </Link> */}
             <LogOutButton className="navLink" />
           </>
         )}
