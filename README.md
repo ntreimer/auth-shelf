@@ -42,7 +42,7 @@ We recommend working in groups of 4 or 6 and pair programming for this project. 
 
 ##### Display all Items
 
-The Shelf page (`ShelfPage.js`at `/shelf`) should show all of the items stored in the database in a list or table.
+[x] The Shelf page (`ShelfPage.js`at `/shelf`) should show all of the items stored in the database in a list or table.
 
 ##### Add Items to the Shelf
 
@@ -52,7 +52,7 @@ The Shelf page (`ShelfPage.js` at `/shelf`) should allow a user to add a new ite
 
 ##### Delete Items from the Shelf
 
-An authenticated user should be able to delete items from the shelf if they were the one who added the item to the shelf.
+[x] An authenticated user should be able to delete items from the shelf if they were the one who added the item to the shelf.
 
 > NOTE: This should require client and server changes. An unauthenticated attacker from Postman should not be able to delete anything.
 
@@ -61,7 +61,6 @@ An authenticated user should be able to delete items from the shelf if they were
 - Ability to edit an existing item on the shelf from the info page.
 - Have anyone, not just logged in users, be able to see what is on the shelf, but not edit, remove, nor add.
 - Add a new route to display all items for a specific user called "My Shelf". The client-side url should be `/shelf/2` where `/2` should be the id of the logged in user. Only the items associated with the specific logged in user should be displayed on this new page.
-- Use "Filestack" for image upload on the add page.
 - Style the application with Material-UI.
 
 ---

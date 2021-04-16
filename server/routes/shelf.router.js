@@ -20,7 +20,11 @@ router.get('/', (req, res) => {
  * Add an item for the logged in user to the shelf
  */
 router.post('/', (req, res) => {
-
+    const query = `
+    INSERT INTO "item"
+    ("description", ")
+    `
+    res.send('merp');
   // endpoint functionality
 });
 
@@ -29,6 +33,15 @@ router.post('/', (req, res) => {
  */
 router.delete('/:id', (req, res) => {
   // endpoint functionality
+  const queryText = `DELETE FROM "item" WHERE id=$1`
+  console.log(req.params.id)
+  pool.query(queryText, [req.params.id])
+  .then((results)=> {
+    res.sendStatus(201)
+  })
+  .catch((error)=>{
+    res.sendStatus(500)
+  })
 });
 
 /**
