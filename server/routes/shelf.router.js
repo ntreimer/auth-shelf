@@ -22,8 +22,9 @@ router.get('/', (req, res) => {
 router.post('/', (req, res) => {
     const query = `
     INSERT INTO "item"
-    ("description", ")
+    ("description", "image_url") VALUES ($1, $2);
     `
+    pool.query(query, [req.body.item, req.body.url])
     res.send('merp');
   // endpoint functionality
 });

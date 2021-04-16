@@ -1,14 +1,17 @@
 import ShelfItem from '../ShelfItem/ShelfItem'
-import {useSelector} from 'react-redux';
+import {useSelector, useDispatch} from 'react-redux';
 import axios from 'axios'
 
 function ItemList (props) {
+
+const dispatch = useDispatch()
 
 const user = useSelector((store) => store.user);
 
 const deleteItem=(id)=>{
     axios.delete('/api/shelf/' + id).then((response)=>{
         console.log(response);
+        dispatch({type: 'FETCH_ITEMS'});
     }).catch((err)=>{
         alert(err);
         console.log(err);
