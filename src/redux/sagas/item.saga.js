@@ -9,7 +9,8 @@ function* itemSaga() {
 function* addItem(action) {
     try{
         const response = yield axios.post('/api/shelf', action.payload);
-        fetchItems();
+        console.log(action.payload);
+        yield put ({type: 'FETCH_ITEMS'})
     } catch {
         console.log('add item error')
     }
